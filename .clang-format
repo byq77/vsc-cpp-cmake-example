@@ -1,0 +1,143 @@
+# Google C++ Style Guide Configuration for clang-format
+# Based on: https://google.github.io/styleguide/cppguide.html
+# options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+# Language: Cpp
+Language: Cpp
+
+# BasedOnStyle: Google
+BasedOnStyle: Google
+
+# Standard: Auto
+Standard: Auto
+
+# Column limit for line length
+ColumnLimit: 100
+
+# Indentation settings
+IndentWidth: 2
+TabWidth: 8
+UseTab: Never
+ContinuationIndentWidth: 2
+
+# Brace and spacing settings
+BreakBeforeBraces: Linux
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+# Function and class formatting
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: true
+BreakConstructorInitializersBeforeComma: false
+
+# Pointer and reference alignment
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Namespace indentation
+NamespaceIndentation: None
+FixNamespaceComments: true
+
+# Include sorting
+IncludeCategories:
+  - Regex: '^<.*\.h>'
+    Priority: 1
+  - Regex: "^<.*"
+    Priority: 2
+  - Regex: ".*"
+    Priority: 3
+IncludeIsMainRegex: "([-_](test|unittest))?$"
+IncludeIsMainSourceRegex: '\.c$'
+
+# Sorting includes
+SortIncludes: true
+
+# Space settings
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Line breaking
+BreakAfterJavaFieldAnnotations: false
+BreakStringLiterals: true
+MaxEmptyLinesToKeep: 1
+
+# Comment formatting
+ReflowComments: true
+CommentPragmas: "^ IWYU pragma:"
+
+# Penalty settings for line breaking decisions
+PenaltyBreakBeforeFirstCallParameter: 30
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 60
+
+# Access modifier formatting
+AccessModifierOffset: -2
+
+# Constructor initializer list formatting
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 4
+
+# Objective-C settings (not applicable for C++)
+ObjCBlockIndentWidth: 2
+ObjCSpaceAfterProperty: false
+ObjCSpaceBeforeProtocolList: true
+
+# Disable formatting for specific constructs
+ForEachMacros:
+  - foreach
+  - Q_FOREACH
+  - BOOST_FOREACH
+
+# Statement macros
+StatementMacros:
+  - Q_UNUSED
+  - QT_REQUIRE_VERSION
+
+# Typename macros
+TypenameMacros:
+  - STD_AUTO_PTR
+
+# Align consecutive assignments, declarations, etc.
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: false
+AlignConsecutiveMacros: false
+
+# Allow all parameters of a function declaration/definition to be put on one line
+AllowAllParametersOfDeclarationOnNextLine: true
+
+# Bin pack parameters and arguments
+BinPackArguments: false
+BinPackParameters: false
+
+# Experimental auto-detection of configuration
+# ExperimentalAutoDetectBinPacking: false
+
+# Keep empty lines at the start of blocks
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# Lambda body alignment
+AlignAfterOpenBracket: Align
+
+# Macro block settings
+MacroBlockBegin: ""
+MacroBlockEnd: ""
+
+# Qualifier alignment
+QualifierAlignment: Leave
