@@ -12,7 +12,7 @@ target_sources(example
 )
 
 # Example how to use external dependency
-cmake_policy(SET CMP0167 NEW)
+# cmake_policy(SET CMP0167 NEW)
 find_package(Boost 1.83.0 REQUIRED)
 
 if(Boost_FOUND)

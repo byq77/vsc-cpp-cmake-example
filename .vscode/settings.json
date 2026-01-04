@@ -6,7 +6,8 @@
     "editor.formatOnType": false,
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools",
-        "editor.formatOnSave": false
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2, 
     },
     "[c]": {
         "editor.defaultFormatter": "ms-vscode.cpptools",
@@ -36,6 +37,5 @@
             "statusBarVisibility": "hidden",
             "inheritDefault": "hidden"
         }
-    },
-    "editor.tabSize": 2,
+    }
 }

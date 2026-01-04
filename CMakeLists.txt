@@ -31,21 +31,23 @@ target_sources(${APP_TARGET}
                 PRIVATE
                 ${PROJECT_SOURCE_DIR}/example-app.cpp)
 target_compile_features(${APP_TARGET} PRIVATE cxx_std_11)
-# -Wall:   The -Wall flag (short for "Warnings: All") is a compiler option used with 
-#          GCC and Clang to enable a broad set of common warnings. It helps catch potential issues 
-#          like unused variables, implicit type conversions, missing return values, and other common 
-#          programming errors that could lead to bugs or undefined behavior.
-# -Wextra: Enables additional compiler warnings (GCC/Clang) beyond -Wall. 
-#          It helps catch more subtle issues (unused parameters, sign comparisons, etc.).
-# -Werror: Treats all warnings as errors, causing the build to fail on any warning.
+# -Wall:      The -Wall flag (short for "Warnings: All") is a compiler option used with 
+#             GCC and Clang to enable a broad set of common warnings. It helps catch potential issues 
+#             like unused variables, implicit type conversions, missing return values, and other common 
+#             programming errors that could lead to bugs or undefined behavior.
+# -Wextra:    Enables additional compiler warnings (GCC/Clang) beyond -Wall. 
+#             It helps catch more subtle issues (unused parameters, sign comparisons, etc.).
+# -Werror:    Treats all warnings as errors, causing the build to fail on any warning.
+# -Wpedantic: It is a compiler flag used with GCC and Clang to enable strict warnings for code that deviates from the ISO C/C++ standard.
+#             It warns about language extensions, non-standard constructs, and other pedantic issues that may affect portability.
+#             Enabling this flag helps ensure code compliance with the standard, reducing potential bugs from non-standard behavior.
 target_compile_options(${APP_TARGET} PRIVATE -Wall -Wextra -Werror)
 target_include_directories(${APP_TARGET} 
                            PRIVATE
                            ${PROJECT_BINARY_DIR}/include
                            ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(${APP_TARGET} PRIVATE example)
-install(TARGETS ${APP_TARGET} DESTINATION ${PROJECT_SOURCE_DIR}/install/bin)
-# endregion TARGET template
-
 # generate config file
 configure_file(include/Config.h.in include/Config.h)
+install(TARGETS ${APP_TARGET} DESTINATION ${PROJECT_SOURCE_DIR}/install/bin)
+# endregion TARGET template
