@@ -7,7 +7,7 @@
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools",
         "editor.formatOnSave": false,
-        "editor.tabSize": 2, 
+        "editor.tabSize": 2,
     },
     "[c]": {
         "editor.defaultFormatter": "ms-vscode.cpptools",
@@ -37,5 +37,9 @@
             "statusBarVisibility": "hidden",
             "inheritDefault": "hidden"
         }
+    },
+    "cmake.useCMakePresets": "never",
+    "cmake.environment": {
+        "VCPKG_ROOT": "/home/byq77/opt/vcpkg"
     }
 }
