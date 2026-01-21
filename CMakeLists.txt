@@ -30,6 +30,8 @@ include(CPack)
 # OPTIONS
 option(SOME_TEST_OPITON "Some test option to play with" ON)
 
+find_package(fmt CONFIG REQUIRED)
+
 # If you want target to be excluded from the "all" target 
 # add_subdirectory(dir_name EXCLUDE_FROM_ALL)
 add_subdirectory(example_lib EXCLUDE_FROM_ALL)
