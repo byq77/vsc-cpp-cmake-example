@@ -1,6 +1,6 @@
 {
   "name": "vsc-cpp-cmake-template-project",
-  "version": "0.1.0",  
+  "version": "0.1.0",
   "dependencies": [
     "boost",
     "fmt"
